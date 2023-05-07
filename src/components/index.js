@@ -5,3 +5,4 @@ export * from "./Snackbar";
 export * from "./RouteCard";
 export * from "./LatexBox";
 export * from "./TaskResultBox";
+export * from "./StudentBox";

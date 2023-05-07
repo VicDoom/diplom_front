@@ -8,6 +8,7 @@ import { UserAccount } from "./pages/UserAccount";
 import { PrivateRoute } from "./components/PrivateRoute";
 import { Registration } from "./pages/Registration";
 import { Task } from "./pages/Task";
+import { Theory } from "./pages/Theory";
 
 const routes = [
   {
@@ -31,6 +32,11 @@ const routes = [
   {
     path: "/task/:id",
     element: <Task />,
+    isPrivate: true,
+  },
+  {
+    path: "/theory/:id",
+    element: <Theory />,
     isPrivate: true,
   },
 ];

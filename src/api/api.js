@@ -75,6 +75,24 @@ export const api = createApi({
         body: queryArg,
       }),
     }),
+    getTheories: builder.query({
+      query: (queryArg) => ({
+        url: "/study-center/theories",
+        method: "GET",
+      }),
+    }),
+    getTheory: builder.query({
+      query: (queryArg) => ({
+        url: `/study-center/theory/${queryArg.id}`,
+        method: "GET",
+      }),
+    }),
+    getStudents: builder.query({
+      query: (queryArg) => ({
+        url: "/auth/students",
+        method: "GET",
+      }),
+    }),
   }),
 });
 
@@ -87,4 +105,7 @@ export const {
   useGetUserInfoQuery,
   usePostTaskResultMutation,
   useGetTasksResultQuery,
+  useGetTheoriesQuery,
+  useGetTheoryQuery,
+  useGetStudentsQuery,
 } = api;
